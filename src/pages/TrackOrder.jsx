@@ -160,6 +160,14 @@ export default function TrackOrder() {
               </div>
             </div>
 
+            {order.status === 'pending' && (
+              <div className="bg-yellow-50 border-b border-yellow-200 p-4 text-center">
+                <p className="text-yellow-800 font-bold text-sm">
+                  ⚠️ Your order is not yet confirmed. Please click "Confirm Order" below to proceed.
+                </p>
+              </div>
+            )}
+
             {order.status !== 'cancelled' ? (
               <div className="p-8 border-b border-gray-100">
                 <div className="flex justify-between relative">
